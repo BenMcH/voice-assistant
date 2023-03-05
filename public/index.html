@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="info">
+		<p id="info_no_microphone" style="display:none">
+			No microphone was found. Ensure that a microphone is installed and that
+			<a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+				microphone settings</a> are configured correctly.
+		</p>
+		<p id="info_denied">Permission to use microphone was denied.</p>
+		<p id="info_blocked">Permission to use microphone is blocked. To change,
+			go to chrome://settings/contentExceptions#media-stream</p>
+		<p id="info_upgrade">Web Speech API is not supported by this browser.
+			Upgrade to <a href="//www.google.com/chrome">Chrome</a>
+			version 25 or later.</p>
+	</div>
+
+	<script src="index.js"></script>
+	<button id="btn" onclick="speechSynthesis.cancel(); btn.style.display = 'none';">Press me to enable voice
+		output</button>
+</body>
+
+</html>
